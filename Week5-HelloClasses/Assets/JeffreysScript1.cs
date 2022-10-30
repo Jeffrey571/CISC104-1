@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class CircleManager : MonoBehaviour
 {
     public Slider radiusSlider;
-    private float circumference;
+    private float cube;
     private float area;
 
     public GameObject radiusTextObject;
@@ -15,7 +15,7 @@ public class CircleManager : MonoBehaviour
     public GameObject areaTextObject;
 
     private TextMeshProUGUI radiusText { get; set; }
-    private TextMeshProUGUI circumferenceText { get; set; }
+    private TextMeshProUGUI cubeText { get; set; }
     private TextMeshProUGUI areaText { get; set; }
 
     // Start is called before the first frame update
@@ -31,9 +31,9 @@ public class CircleManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        radiusText.text = "Circle Radius: " + radiusSlider.value.ToString();
-        circumferenceText.text = "Circle Circumference: " + circumference.ToString();
-        areaText.text = "Circle Area: " + area.ToString();
+        radiusText.text = "Cube Radius: " + radiusSlider.value.ToString();
+        circumferenceText.text = "Cube Circumference: " + circumference.ToString();
+        areaText.text = "Cube Area: " + area.ToString();
     }
 
     public void SliderChanged(float newValue)
