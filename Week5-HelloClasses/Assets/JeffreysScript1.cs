@@ -4,46 +4,46 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CircleManager : MonoBehaviour
+public class JeffreysScript1 : MonoBehaviour
 {
-    public Slider radiusSlider;
-    private float cube;
-    private float area;
+    //public Slider radiusSlider;
+    //private float cube;
+    //private float area;
 
-    public GameObject radiusTextObject;
-    public GameObject circumferenceTextObject;
-    public GameObject areaTextObject;
+    //public GameObject radiusTextObject;
+    //public GameObject circumferenceTextObject;
+    //public GameObject areaTextObject;
 
-    private TextMeshProUGUI radiusText { get; set; }
-    private TextMeshProUGUI cubeText { get; set; }
-    private TextMeshProUGUI areaText { get; set; }
+    //private TextMeshProUGUI radiusText { get; set; }
+    //private TextMeshProUGUI cubeText { get; set; }
+    //private TextMeshProUGUI areaText { get; set; }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        radiusText = radiusTextObject.GetComponent<TextMeshProUGUI>();
-        circumferenceText = circumferenceTextObject.GetComponent<TextMeshProUGUI>();
-        areaText = areaTextObject.GetComponent<TextMeshProUGUI>();
+    //// Start is called before the first frame update
+    //void Start()
+    //{
+    //    radiusText = radiusTextObject.GetComponent<TextMeshProUGUI>();
+    //    circumferenceText = circumferenceTextObject.GetComponent<TextMeshProUGUI>();
+    //    areaText = areaTextObject.GetComponent<TextMeshProUGUI>();
 
-        CalculateGeometricProperties();
-    }
+    //    CalculateGeometricProperties();
+    //}
 
-    // Update is called once per frame
-    void Update()
-    {
-        radiusText.text = "Cube Radius: " + radiusSlider.value.ToString();
-        circumferenceText.text = "Cube Circumference: " + circumference.ToString();
-        areaText.text = "Cube Area: " + area.ToString();
-    }
+    //// Update is called once per frame
+    //void Update()
+    //{
+    //    radiusText.text = "Cube Radius: " + radiusSlider.value.ToString();
+    //    circumferenceText.text = "Cube Circumference: " + circumference.ToString();
+    //    areaText.text = "Cube Area: " + area.ToString();
+    //}
 
-    public void SliderChanged(float newValue)
-    {
-        CalculateGeometricProperties();
-    }
+    //public void SliderChanged(float newValue)
+    //{
+    //    CalculateGeometricProperties();
+    //}
 
-    private void CalculateGeometricProperties()
-    {
-        circumference = 2 * Mathf.PI * radiusSlider.value;
-        area = Mathf.PI * (radiusSlider.value * radiusSlider.value);
-    }
+    //private void CalculateGeometricProperties()
+    //{
+    //    circumference = 2 * Mathf.PI * radiusSlider.value;
+    //    area = Mathf.PI * (radiusSlider.value * radiusSlider.value);
+    //}
 }

@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class CircleManager : MonoBehaviour
 {
     public Slider radiusSlider;
-    private float cube;
+    private float circumference;
     private float area;
 
     public GameObject radiusTextObject;
@@ -15,7 +15,7 @@ public class CircleManager : MonoBehaviour
     public GameObject areaTextObject;
 
     private TextMeshProUGUI radiusText { get; set; }
-    private TextMeshProUGUI cubeText { get; set; }
+    private TextMeshProUGUI circumferenceText { get; set; }
     private TextMeshProUGUI areaText { get; set; }
 
     // Start is called before the first frame update
