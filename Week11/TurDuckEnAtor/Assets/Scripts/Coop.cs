@@ -19,7 +19,8 @@ public class Coop
 
     public Chicken RemoveChicken()
     {
-        // I think I removed a line here
+        // I think I removed a line here - Fixed.
+        Chicken removedChicken = chickens[currentChicken];
         currentChicken++;
         return removedChicken;
     }

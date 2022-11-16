@@ -30,7 +30,8 @@ public class Pond
 
         int[] returnedWeights = new int[ducks.Length - currentDuck];
 
-        // I think I removed a line here
+        // I think I removed a line here - Fixed.
+        for(int d = 0; d < ducks.Length - currentDuck; d++)
         {
             returnedWeights[d] = ducks[currentDuck + d].WeightInOunces;
         }

@@ -21,7 +21,8 @@ public class Turkey : Bird
         if(this.HasBones)
         {
             this.WeightInOunces -= (int)((float)this.WeightInOunces * .27);
-            // I think I removed a line here
+            // I think I removed a line here - Fixed.
+            this.HasBones = false;
         }
     }
 

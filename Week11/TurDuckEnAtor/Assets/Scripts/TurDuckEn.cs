@@ -18,11 +18,11 @@ public class TurDuckEn : Bird
     /// </summary>
     /// <exception cref="NotImplementedException"></exception>
 	public TurDuckEn()
-	{
+    {
 		throw new NotImplementedException();
 	}
 
-	public TurDuckEn(Turkey turkey, Duck duck, Chicken chicken)
+    public TurDuckEn(Turkey turkey, Duck duck, Chicken chicken)
     {
         if(turkey.HasBones || duck.HasBones || chicken.HasBones)
         {

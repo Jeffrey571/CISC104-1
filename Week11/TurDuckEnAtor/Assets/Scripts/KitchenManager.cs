@@ -60,7 +60,8 @@ public class KitchenManager : MonoBehaviour
 
         forestText = forestGameObject.GetComponent<TextMeshProUGUI>();
         pondText = pondGameObject.GetComponent<TextMeshProUGUI>();
-        // I think I removed a line here
+        // I think I removed a line here - Fixed.
+        coopText = coopGameObject.GetComponent<TextMeshProUGUI>();
         servedText = servedGameObject.GetComponent<TextMeshProUGUI>();
         chefStatusText = chefStatusObject.GetComponent<TextMeshProUGUI>();
     }
@@ -81,7 +82,8 @@ public class KitchenManager : MonoBehaviour
                 chefState = CurrentOperation.GetDuck;
                 break;
             case CurrentOperation.GetDuck:
-                // I think I removed a line here
+                // I think I removed a line here - Fixed.
+                currentDuck = duckPond.RemoveDuck();
                 chefState = CurrentOperation.BoneDuck;
                 break;
             case CurrentOperation.BoneDuck:
@@ -93,7 +95,8 @@ public class KitchenManager : MonoBehaviour
                 chefState = CurrentOperation.BoneTurkey;
                 break;
             case CurrentOperation.BoneTurkey:
-                // I think I removed a line here
+                // I think I removed a line here - Fixed.
+                currentTurkey.Debone();
                 chefState = CurrentOperation.AssembleTurDuckEn;
                 break;
             case CurrentOperation.AssembleTurDuckEn:
@@ -110,7 +113,8 @@ public class KitchenManager : MonoBehaviour
             case CurrentOperation.BakingTurDuckEn:
                 if(!currentTurDuckEn.IsCooked)
                 {
-                    // I think I removed a line here
+                    // I think I removed a line here - Fixed.
+                    currentTurDuckEn.CookOneMinute();
                 }
                 else
                 {
@@ -158,7 +162,8 @@ public class KitchenManager : MonoBehaviour
         {
             foreach (int weight in duckPond.GetRemainingDuckWeights())
             {
-                // I think I removed a line here
+                // I think I removed a line here - Fixed.
+                pondText.text += weight.ToString() + " ";
             }
         }
         else
@@ -169,7 +174,8 @@ public class KitchenManager : MonoBehaviour
         coopText.text = "Coop: ";
         if (!chickenCoop.NoMoreChickens())
         {
-            // I think I removed a line here
+            // I think I removed a line here - Fixed.
+            foreach (int weight in chickenCoop.GetRemainingChickenWeights())
             {
                 coopText.text += weight.ToString() + " ";
             }
