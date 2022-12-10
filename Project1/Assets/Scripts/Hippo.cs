@@ -34,7 +34,7 @@ public class Hippo: MonoBehaviour
 	 {
 	  if(hippo_planet.is_active)
 	  {
-		  if (Random.value <= percantage_bite)
+		  if (Random.value < percantage_bite)
 		   {
 			hippo_planet.handle_bite(this);
 		   }
